@@ -2,7 +2,7 @@ import os, sys
 from setuptools import setup, find_packages
 # from numpy.distutils.core import setup, Extension
 
-cmd = 'gfortran ./glmnet_py/GLMnet.f -fPIC -fdefault-real-8 -shared -o ./glmnet_py/GLMnet.so'
+cmd = 'gfortran ./glmnet_py/GLMnet.f -fdefault-real-8 -fPIC -shared -o ./glmnet_py/GLMnet.so'
 os.system(cmd)
 
 setup(name='glmnet_py',
@@ -27,4 +27,3 @@ setup(name='glmnet_py',
         ],
       keywords='glm glmnet ridge lasso elasticnet',
       )
-
